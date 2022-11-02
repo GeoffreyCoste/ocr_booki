@@ -18,7 +18,7 @@
         <nav class="navbar">
             <ul class="navbar-nav">
                 <li class="nav__item">
-                    <a href="#accomodation" class="nav__link">Hébergements</a>
+                    <a href="#accomodations" class="nav__link">Hébergements</a>
                 </li>
                 <li class="nav__item">
                     <a href="#activities" class="nav__link">Activités</a>
@@ -44,25 +44,25 @@
         <section id="filters">
             <h2>Filtres</h2>
             <ul class="list">
-                <li class="list_item">
+                <li class="list__item">
                     <button class="btn">
                         <i class="fa-solid fa-money-bill-wave"></i>
                         Economique
                     </button>
                 </li>
-                <li class="list_item">
+                <li class="list__item">
                     <button class="btn">
                         <i class="fa-solid fa-person"></i>
                         Familiale
                     </button>
                 </li>
-                <li class="list_item">
+                <li class="list__item">
                     <button class="btn">
                         <i class="fa-solid fa-heart"></i>
                         Romantique
                     </button>
                 </li>
-                <li class="list_item">
+                <li class="list__item">
                     <button class="btn">
                         <i class="fa-solid fa-dog"></i>
                         Animaux autorisés
@@ -75,7 +75,7 @@
             <section id="accomodations">
                 <h2>Hébergements à Marseille</h2>
                 <article>
-                    <a class="card" href="#">
+                    <a class="card card--border" href="#">
                         <img 
                             class="card__img"
                             srcset="assets/acc_img1_xl.jpg 5993w, assets/acc_img1_lg.jpg 2997w, assets/acc_img1_md.jpg 1499w, assets/acc_img1_sm.jpg 750w"
@@ -97,7 +97,7 @@
                     </a>
                 </article>
                 <article>
-                    <a class="card" href="#">
+                    <a class="card card--border" href="#">
                         <img 
                             class="card__img"
                             srcset="assets/acc_img2_xl.jpg 5993w, assets/acc_img2_lg.jpg 2997w, assets/acc_img2_md.jpg 1499w, assets/acc_img2_sm.jpg 750w"
@@ -119,7 +119,7 @@
                     </a>
                 </article>
                 <article>
-                    <a class="card" href="#">
+                    <a class="card card--border" href="#">
                         <img 
                             class="card__img"
                             srcset="assets/acc_img3_xl.jpg 5993w, assets/acc_img3_lg.jpg 299w, assets/acc_img3_md.jpg 1499w, assets/acc_img3_sm.jpg 750w"
@@ -141,7 +141,7 @@
                     </a>
                 </article>
                 <article>
-                    <a class="card" href="#">
+                    <a class="card card--border" href="#">
                         <img 
                             class="card__img"
                             srcset="assets/acc_img4_xl.jpg 5993w, assets/acc_img4_lg.jpg 2997w, assets/acc_img4_md.jpg 1499w, assets/acc_img4_sm.jpg 750w"
@@ -163,7 +163,7 @@
                     </a>
                 </article>
                 <article>
-                    <a class="card" href="#">
+                    <a class="card card--border" href="#">
                         <img
                             class="card__img"
                             srcset="assets/acc_img5_xl.jpg 5993w, assets/acc_img5_lg.jpg 2997w, assets/acc_img5_md.jpg 1499w, assets/acc_img5_sm.jpg 750w"
@@ -185,7 +185,7 @@
                     </a>
                 </article>
                 <article>
-                    <a class="card" href="#">
+                    <a class="card card--border" href="#">
                         <img 
                             class="card__img"
                             srcset="assets/acc_img6_xl.jpg 5993w, assets/acc_img6_lg.jpg 2997w, assets/acc_img6_md.jpg 1499w, assets/acc_img6_sm.jpg 750w"
@@ -209,9 +209,9 @@
                 <a class="link" href="#">Afficher plus</a>
             </section>
             <aside id="most-popular">
-                <h2><i class="fa-solid fa-chart-line"></i> Les plus populaires</h2>
+                <h2>Les plus populaires <i class="fa-solid fa-chart-line"></i></h2>
                 <article>
-                    <a class="card" href="#">
+                    <a class="card card--border" href="#">
                         <img 
                             class="card__img"
                             srcset="assets/mp_img1_xl.jpg 5993w, assets/mp_img1_lg.jpg 2997w, assets/mp_img1_md.jpg 1499w, assets/mp_img1_sm.jpg 750w"
@@ -233,7 +233,7 @@
                     </a>
                 </article>
                 <article>
-                    <a class="card" href="#">
+                    <a class="card card--border" href="#">
                         <img 
                             class="card__img"
                             srcset="assets/mp_img2_xl.jpg 5993w, assets/mp_img2_lg.jpg 2997w, assets/mp_img2_md.jpg 1499w, assets/mp_img2_sm.jpg 750w"
@@ -255,7 +255,7 @@
                     </a>
                 </article>
                 <article>
-                    <a class="card" href="#">
+                    <a class="card card--border" href="#">
                         <img 
                             class="card__img"
                             srcset="assets/mp_img3_xl.jpg 5993w, assets/mp_img3_lg.jpg 2997w, assets/mp_img3_md.jpg 1499w, assets/mp_img3_sm.jpg 750w"
@@ -343,13 +343,13 @@
             <h4>A propos</h4>
             <ul class="list list--col">
                 <li class="list__item">
-                    <a class="footer-link" href="#">Fonctionnement du site</a>
+                    <a class="list__item__link" href="#">Fonctionnement du site</a>
                 </li>
                 <li class="list__item">
-                    <a class="footer-link" href="#">Conditions générales</a>
+                    <a class="list__item__link" href="#">Conditions générales</a>
                 </li>
                 <li class="list__item">
-                    <a class="footer-link" href="#">Données et confidentialité</a>
+                    <a class="list__item__link" href="#">Données et confidentialité</a>
                 </li>
             </ul>
         </div>
@@ -357,10 +357,10 @@
             <h4>Nos hébergements</h4>
             <ul class="list list--col">
                 <li class="list__item">
-                    <a class="footer-link" href="#">Charte qualité</a>
+                    <a class="list__item__link" href="#">Charte qualité</a>
                 </li>
                 <li class="list__item">
-                    <a class="footer-link" href="#">Proposer votre hôtel</a>
+                    <a class="list__item__link" href="#">Proposer votre hôtel</a>
                 </li>
             </ul>
         </div>
@@ -368,10 +368,10 @@
             <h4>Assistance</h4>
             <ul class="list list--col">
                 <li class="list__item">
-                    <a class="footer-link" href="#">Centre d'aide</a>
+                    <a class="list__item__link" href="#">Centre d'aide</a>
                 </li>
                 <li class="list__item">
-                    <a class="footer-link" href="#">Nous contacter</a>
+                    <a class="list__item__link" href="#">Nous contacter</a>
                 </li>
             </ul>
         </div>
