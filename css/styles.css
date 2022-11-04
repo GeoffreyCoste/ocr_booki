@@ -249,13 +249,52 @@ main {
     justify-content: space-between;
 }
 
+.card {
+    display: flex;
+    font-size: 0.875rem;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card--border {
+    border: 5px solid #ffffff;
+}
+
+.card a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.card__content {
+    color: var(--primary);
+    padding: 0.5rem;
+}
+
+.card__content__rating {
+    display: flex;
+    gap: 2px;
+    margin-top: 0.25rem;
+    /* margin-top: auto; */
+}
+
+.card__content__rating i {
+    font-size: 0.75rem;
+    color: var(--bg-grey);
+}
+
+.card__content__rating i.star--blue {
+    color: var(--secondary);
+}
+
 #accomodations {
-    width: 60%;
+    width: 62%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     row-gap: 2rem;
-    padding: 2.625rem 2.5rem; 
+    padding: 2rem 1.5rem; 
     background-color: var(--bg-grey);
     border-radius: var(--border-radius);
 }
@@ -264,9 +303,13 @@ main {
     width: 100%;
 }
 
-#accomodations article {
-    width: 30%;
-    height: max-content;
+#accomodations .card {
+    width: 32%;
+    max-height: 270px;
+}
+
+#accomodations .card a {
+    flex-direction: column;
 }
 
 #accomodations .card__img {
@@ -276,14 +319,22 @@ main {
     border-radius: 18px 18px 0 0;
 }
 
+#accomodations .card__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+#accomodations .card__content p:first-of-type {
+    margin-top: auto;
+}
+
 #accomodations .link {
     width: 100%;
     color: var(--primary);
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.321rem;
-    /* margin-top: 1.25rem; */
-    /* border: none; */
     cursor: pointer;
     user-select: none;
 }
@@ -293,7 +344,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2.625rem 2.5rem; 
+    padding: 2rem 1.5rem; 
     background-color: var(--bg-grey);
     border-radius: var(--border-radius);
 }
@@ -308,59 +359,24 @@ main {
     color: var(--secondary);
 }
 
-#most-popular article {
+#most-popular .card {
     width: 100%;
     height: 144px;
-}
-
-#most-popular .card {
-    height: 100%;
     flex-direction: row;
 }
 
 #most-popular .card__img {
-    width: 100px;
-    border-radius: 18px 0 0 18px;
+    width: 40%;
+    border-radius: 20px 0 0 20px;
+}
+
+#most-popular .card__content {
+    display: flex;
+    flex-direction: column;
 }
 
 #most-popular .card__content__rating {
-    flex: 1 1 auto;
-    align-items: flex-end;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.875rem;
-    background-color: #ffffff;
-    border-radius: var(--border-radius);
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-}
-
-.card--border {
-    border: 5px solid #ffffff;
-}
-
-.card__content {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-    color: var(--primary);
-    padding: 0.625rem 1rem;
-}
-
-.card__content__rating {
-    display: flex;
-    gap: 2px;
-}
-
-.card__content__rating i {
-    font-size: 0.75rem;
-    color: var(--bg-grey);
-}
-
-.card__content__rating i.star--blue {
-    color: var(--secondary);
+    margin-top: auto;
 }
 
 #activities {
@@ -368,29 +384,36 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    gap: 2rem;
     margin: 3.75rem 0;
+    padding: 2rem 1.5rem;
 }
 
 #activities h2 {
     width: 100%;
-    margin-bottom: 2.625rem;
 }
 
-#activities .wrapper {
+#activities .card {
     width: 22%;
-    max-width: 302px;
+}
+
+#activities .card a {
+    flex-direction: column;
 }
 
 #activities .card__img {
     width: 100%;
     height: 389px;
-    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
 }
 
 #activities .card__content {
-    height: 56px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
     font-weight: 700;
+    padding: 1.25rem;
 }
 
 footer {
