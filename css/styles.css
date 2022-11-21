@@ -1,47 +1,47 @@
 /*
- ******************************************
-    [Project]    Booki
+ *****************************************************
+    [PROJECT]    Booki
 
-    [Table of contents] 
+    [TABLE OF CONTENTS] 
 
-    Variables
-    Resets
-    Global Styles
-    Utilities
-    Header
-    -- .navbar
-    Main
-    -- Section #search-bar
-    -- Section #filters
-    -- Section #accomodations
-    -- Aside #most-popular
-    -- Section #activities
-    Footer
-    Media Queries
-    -- Tablet
-    -- -- Tablet Header
-    -- -- Tablet Main
-    -- -- -- Tablet Section #filters
-    -- -- -- Tablet Section #accomodations
-    -- -- -- Tablet Aside #most-popular
-    -- -- -- Tablet Section #activities
-    -- -- -- Tablet Footer
-    -- Mobile
-    -- -- Mobile Reset
-    -- -- Mobile Header
-    -- -- -- Mobile .navbar
-    -- -- Mobile Main
-    -- -- -- Mobile Section #search-bar
-    -- -- -- Mobile Section #filters
-    -- -- -- Mobile Section #accomodations
-    -- -- -- Mobile Aside #most-popular
-    -- -- -- Mobile Section #activities
-    -- -- -- Mobile Footer
+    1.0 - Variables
+    2.0 - Resets
+    3.0 - Global Styles
+    4.0 - Utilities
+    5.0 - Header
+      5.1 - .navbar
+    6.0 - Main
+      6.1 - Section #search-bar
+      6.2 - Section #filters
+      6.3 - Section #accomodations
+      6.4 - Aside #most-popular
+      6.5 - Section #activities
+    7.0 - Footer
+    8.0 - Media Queries
+      8.1 - Tablet
+        8.1.1 - Tablet Header
+        8.1.2 - Tablet Main
+          8.1.2.1 - Tablet Section #filters
+          8.1.2.2 - Tablet Section #accomodations
+          8.1.2.3 - Tablet Aside #most-popular
+          8.1.2.4 - Tablet Section #activities
+        8.1.3 - Tablet Footer
+      8.2 - Mobile
+        8.2.1 - Mobile Reset
+        8.2.2 - Mobile Header
+          8.2.2.1 - Mobile .navbar
+        8.2.3 - Mobile Main
+          8.2.3.1 - Mobile Section #search-bar
+          8.2.3.2 - Mobile Section #filters
+          8.2.3.3 - Mobile Section #accomodations
+          8.2.3.4 - Mobile Aside #most-popular
+          8.2.3.5 - Mobile Section #activities
+        8.2.4 - Mobile Footer
 
- ******************************************
+ *****************************************************
 */
 
-/* Variables */
+/* 1.0 - Variables */
 :root {
     --font-family: 'Raleway', sans-serif;
     --font-size: 16px;
@@ -55,7 +55,7 @@
     --border-radius: 20px;
 }
 
-/* Resets */
+/* 2.0 - Resets */
 * {
     margin: 0;
     padding: 0;
@@ -72,7 +72,7 @@ body {
     background-color: #ffffff;
 }
 
-/* Global Styles */
+/* 3.0 - Global Styles */
 h1, h2 {
     font-size: 1.375rem;
     font-weight: 700;
@@ -99,7 +99,7 @@ a {
     text-decoration: none;
 }
 
-/* Utilities */
+/* 4.0 - Utilities */
 .btn {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -166,15 +166,13 @@ a {
     color: var(--secondary);
 }
 
-/* Header */
+/* 5.0 - Header */
 header {
     max-width: 1400px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    padding: 4rem 0;
 }
 
 .logo {
@@ -183,7 +181,7 @@ header {
     cursor: pointer;
 }
 
-/* Navbar */
+/* 5.1 - .navbar */
 .navbar {
     flex-basis : 305px;
 }
@@ -193,6 +191,19 @@ header {
     justify-content: space-around;
 }
 
+.nav__item {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid transparent;
+}
+
+.nav__item:hover {
+    border-top: 3px solid var(--secondary);
+}
+
 .nav__link {
     font-weight: 500;
     color: var(--primary);
@@ -200,27 +211,11 @@ header {
     position: relative;
 }
 
-.nav__link:hover {
+.nav__item:hover .nav__link {
     color: var(--secondary);
 }
 
-.nav__link::after {
-    content: "";
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    top: -2rem;
-    left: 0;
-    background-color: var(--secondary);
-    transition: opacity ease-in-out .3s;
-    opacity: 0;
-}
-
-.nav__link:hover::after {
-    opacity: 1;
-}
-
-/* Main */
+/* 6.0 - Main */
 main {
     max-width: 1400px;
     margin: auto;
@@ -228,7 +223,7 @@ main {
     flex-direction: column;
 }
 
-/* Section #search-bar */
+/* 6.1 - Section #search-bar */
 #search-bar {
     display: flex;
     flex-direction: column;
@@ -257,6 +252,7 @@ main {
 
 #form__input {
     width: 332px;
+    max-width: 332px;
     padding: 0 1rem;
     color: var(--primary);
     font-size: 1.125rem;
@@ -297,7 +293,7 @@ main {
     display: none;
 }
 
-/* Section #filters */
+/* 6.2 - Section #filters */
 #filters {
     display: flex;
     flex-flow: row wrap;
@@ -323,9 +319,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     margin-right: 11px;
     color: var(--secondary);
     font-size: 0.75rem;
+}
+
+.fa-info::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
     border: 1px solid var(--grey);
     border-radius: 50%;
 }
@@ -347,7 +351,7 @@ main {
     margin-right: 2rem;
 }
 
-/* Section #accomodations */
+/* 6.3 - Section #accomodations */
 #accomodations {
     width: 62%;
     display: flex;
@@ -399,7 +403,7 @@ main {
     user-select: none;
 }
 
-/* Section #most-popular */
+/* 6.4 - Aside #most-popular */
 #most-popular {
     width: 35%;
     display: flex;
@@ -442,7 +446,7 @@ main {
     margin-top: auto;
 }
 
-/* Section #activities */
+/* 6.5 - Section #activities */
 #activities {
     display: flex;
     flex-flow: row wrap;
@@ -478,9 +482,11 @@ main {
     padding: 1.25rem;
 }
 
-/* Footer */
+/* 7.0 - Footer */
 footer {
+    max-width: 1400px;
     display: flex;
+    margin: auto;
     padding: 2rem 4rem;
     background-color: var(--bg-grey);
 }
@@ -503,22 +509,22 @@ footer {
     color: var(--primary);
 }
 
-/* Media Queries */
+/* 8.0 - Media Queries */
 
-/* Tablet */
+/* 8.1 - Tablet */
 @media screen and (max-width: 992px) {
-    /* Tablet Header */
+    /* 8.1.1 - Tablet Header */
     header {
-        padding: 3rem 0 4rem 0;
+        padding-bottom: 4rem;
     }
 
     .nav__link::after {
         top: -1rem;
     }
 
-    /* Tablet Main */
+    /* 8.1.2 - Tablet Main */
 
-    /* Tablet Section #filters */
+    /* 8.1.2.1 - Tablet Section #filters */
     #filters h2 {
         margin-right: 0.6rem;
     }
@@ -553,7 +559,7 @@ footer {
         border-width: 3px;
     }
 
-    /* Tablet Section #accomodations */
+    /* 8.1.2.2 - Tablet Section #accomodations */
     #accomodations {
         width: 100%;
         margin-bottom: 3.313rem;
@@ -564,7 +570,7 @@ footer {
         font-size: 0.875rem;
     }
 
-    /* Tablet Aside #most-popular */
+    /* 8.1.2.3 - Tablet Aside #most-popular */
     #most-popular {
         width: 100%;
         flex-flow: row wrap;
@@ -581,7 +587,7 @@ footer {
         font-size: 0.875rem;
     }
 
-    /* Tablet Section #activities */
+    /* 8.1.2.4 - Tablet Section #activities */
     #activities {
         gap: 1rem;
         padding: 0;
@@ -595,7 +601,7 @@ footer {
         justify-content: center;
     }
     
-    /* Tablet Footer */
+    /* 8.1.3 - Tablet Footer */
     footer {
         justify-content: space-between;
         padding: 2rem 0 2rem 4rem;
@@ -603,37 +609,43 @@ footer {
 
 }
 
-/* Mobile */
+/* 8.2 - Mobile */
 @media screen and (max-width: 768px) {
-    /* Mobile Reset */
+    /* 8.2.1 - Mobile Reset */
     body {
         margin: 0;
     }
 
-    /* Mobile Header */
+    /* 8.2.2 - Mobile Header */
     header {
         flex-flow: row wrap;
-        padding: 1.443rem 0;
-        border-bottom: 1px solid var(--bg-grey);
+        padding-top: 1.443rem;
+        padding-bottom: 0;
     }
 
-    /* Mobile .navbar */
+    /* 8.2.2.1 - Mobile .navbar */
     .navbar {
         flex-basis: 100%;
     }
 
     .logo {
-        margin: 0 auto 3rem auto;
+        margin: 0 auto 1.5rem auto;
     }
 
-    .nav__link::after {
-        height: 3px;
-        top: 2.5rem;
+    .nav__item {
+        height: 4rem;
+        border-top: 0;
+        border-bottom: 3px solid var(--bg-grey);
+    }
+
+    .nav__item:hover {
+        border-top: 0;
+        border-bottom-color: var(--secondary);
     }
     
-    /* Mobile Main */
+    /* 8.2.3 - Mobile Main */
 
-    /* Mobile Section #search-bar */
+    /* 8.2.3.1 - Mobile Section #search-bar */
     #search-bar {
         margin: 0 1rem;
         padding-top: 2rem;
@@ -660,7 +672,7 @@ footer {
         color: #ffffff;
     }
 
-    /* Mobile Section #filters */
+    /* 8.2.3.2 - Mobile Section #filters */
     #filters {
         margin: 0 1rem;
     }
@@ -673,16 +685,19 @@ footer {
 
     #filters .list {
         width: 100%;
+        max-width: 440px;
         flex-wrap: wrap;
         row-gap: 1rem;
     }
 
     .list__item {
         flex-basis: 48%;
+        max-width: 200px;
+        min-width: 142px;
     }
 
     .list__item:nth-child(odd) {
-        margin-right: 0.75rem;
+        margin-right: auto;
     }
 
     .list__item:nth-child(even) {
@@ -708,7 +723,11 @@ footer {
         align-items: center;
     }
 
-    /* Mobile Section #accomodations */
+    .fa-info {
+        align-self: flex-start;
+    }
+
+    /* 8.2.3.3 - Mobile Section #accomodations */
     #accomodations {
         order: 2;
         margin-bottom: 0;
@@ -731,7 +750,7 @@ footer {
         display: none;
     }
 
-    /* Mobile Aside #most-popular */
+    /* 8.2.3.4 - Mobile Aside #most-popular */
     #most-popular {
         order: 1;
         padding: 1.5rem 1rem;
@@ -747,7 +766,7 @@ footer {
         width: 40%;
     }
 
-    /* Mobile Section #activities */
+    /* 8.2.3.5 - Mobile Section #activities */
     #activities {
         flex-direction: column;
         padding: 0 1rem;
@@ -761,7 +780,7 @@ footer {
         height: 134px;
     }
 
-    /* Mobile Footer */
+    /* 8.2.4 - Mobile Footer */
     footer {
         width: 100%;
         flex-direction: column;
